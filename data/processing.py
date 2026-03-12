@@ -61,7 +61,7 @@ def normalize_series(
     """
     Normaliza una columna numérica para facilitar comparaciones en gráficas.
 
-    - ``minmax``: escala a \[0, 1].
+    - ``minmax``: escala a [0, 1].
     - ``zscore``: resta la media y divide por la desviación estándar.
     """
     if column not in df.columns:

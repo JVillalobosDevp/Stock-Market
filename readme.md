@@ -15,7 +15,7 @@ The backend contains a small, modular pipeline to:
 Main function (interface for the web layer) lives in `data/downloader.py`:
 
 ```python
-from prediccion_acciones.data.downloader import fetch_stock_data
+from data.downloader import fetch_stock_data
 
 df = fetch_stock_data(
     ticker="AAPL",
@@ -49,8 +49,8 @@ These helpers operate on pandas DataFrames and keep the original data immutable 
 Plot functions live in `plots/stock_plots.py` and use matplotlib:
 
 ```python
-from prediccion_acciones.data.downloader import fetch_stock_data
-from prediccion_acciones.plots.stock_plots import (
+from data.downloader import fetch_stock_data
+from plots.stock_plots import (
     plot_price_history,
     plot_moving_average,
 )

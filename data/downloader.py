@@ -4,7 +4,7 @@ from typing import Optional
 import pandas as pd
 import yfinance as yf
 
-from prediccion_acciones.config import config
+from config import config
 
 
 def download_price_history(
@@ -40,6 +40,17 @@ def download_price_history(
 
     if data.empty:
         raise ValueError(f"No se obtuvieron datos para {ticker}.")
+
+    # Algunas versiones/configuraciones de yfinance devuelven columnas MultiIndex
+    # con el ticker como segundo nivel (p.ej. ("Close", "AAPL")).
+    if isinstance(data.columns, pd.MultiIndex):
+        tickers = set(data.columns.get_level_values(-1))
+        if ticker not in tickers:
+            raise ValueError(
+                f"Se obtuvo un DataFrame con columnas multi-ticker, pero no contiene {ticker!r}. "
+                f"Tickers disponibles: {sorted(tickers)}"
+            )
+        data = data.xs(ticker, axis=1, level=-1, drop_level=True)
 
     required_cols = {"Open", "High", "Low", "Close", "Volume"}
     if not required_cols.issubset(set(data.columns)):

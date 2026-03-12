@@ -3,9 +3,9 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 
-from prediccion_acciones.data.downloader import download_price_history
-from prediccion_acciones.features.engineering import add_return_features
-from prediccion_acciones.models.trainer import load_model
+from data.downloader import download_price_history
+from features.engineering import add_return_features
+from models.trainer import load_model
 
 
 def predict_future_return(

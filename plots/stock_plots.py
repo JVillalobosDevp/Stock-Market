@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.figure import Figure
 
-from prediccion_acciones.data.processing import (
+from data.processing import (
     add_moving_average,
     prepare_price_data,
 )
@@ -107,7 +107,7 @@ def example_usage_aapl() -> None:
     verificar que el pipeline de descarga, procesamiento y graficación
     funciona correctamente.
     """
-    from prediccion_acciones.data.downloader import fetch_stock_data
+    from data.downloader import fetch_stock_data
 
     ticker = "AAPL"
     df = fetch_stock_data(

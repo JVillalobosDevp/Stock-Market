@@ -3,7 +3,7 @@ from typing import Tuple
 import numpy as np
 import pandas as pd
 
-from prediccion_acciones.config import config
+from config import config
 
 
 def add_return_features(
