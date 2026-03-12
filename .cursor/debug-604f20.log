@@ -1,0 +1,24 @@
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773359060708,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773359060711,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773359060716,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773359060725,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773359060726,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773359060728,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":502,"statusText":"Bad Gateway","ok":false},"timestamp":1773359061027,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":502,"ok":false},"timestamp":1773359061029,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773359061030,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":502,"statusText":"Bad Gateway","ok":false},"timestamp":1773359061032,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":502,"ok":false},"timestamp":1773359061033,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773359061034,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773359081281,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773359081281,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773359081282,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773359081282,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":502,"statusText":"Bad Gateway","ok":false},"timestamp":1773359081305,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":502,"ok":false},"timestamp":1773359081316,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":502,"statusText":"Bad Gateway","ok":false},"timestamp":1773359081317,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":502,"ok":false},"timestamp":1773359081322,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773359082002,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773359082003,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773359082033,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773359082052,"hypothesisId":"H2"}
