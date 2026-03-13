@@ -1,2 +1,29 @@
 {"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-12T23:46:46.669646Z"}
 {"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-12T23:46:46.670433Z"}
+{"message": "backend_started", "data": {"port": 8000}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:08:28.018264Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:08:46.463068Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:08:46.465317Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:08:46.470944Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:08:46.512220Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:08:47.275880Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:08:47.967435Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:08:53.237126Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:08:53.240427Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:08:53.246971Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:08:53.282537Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:08:53.444959Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:08:54.476952Z"}
+{"message": "backend_started", "data": {"port": 8000}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:10:45.154515Z"}
+{"message": "backend_started", "data": {"port": 8000}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:11:17.374952Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:11:38.059406Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:11:38.064542Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:11:38.082767Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:11:38.096702Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:11:38.985053Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:11:39.529371Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:11:50.723205Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:11:50.738577Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/history", "ticker": "SPY"}, "hypothesisId": "H3", "timestamp": "2026-03-13T00:11:51.094145Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/markets"}, "hypothesisId": "H1", "timestamp": "2026-03-13T00:11:51.565042Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:11:52.247762Z"}
+{"message": "route_entered", "data": {"endpoint": "/api/portfolio-allocation"}, "hypothesisId": "H2", "timestamp": "2026-03-13T00:11:52.256546Z"}

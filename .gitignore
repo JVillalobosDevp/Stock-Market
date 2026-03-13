@@ -1,0 +1,23 @@
+# Entorno y secretos (nunca subir el token)
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Datos locales del bot (chat_ids suscritos y offset de updates)
+data/telegram_chats.json
+data/telegram_offset.json
+
+# Logs de depuración
+debug-*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/

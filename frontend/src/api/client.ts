@@ -108,3 +108,39 @@ export async function fetchSentiment(): Promise<SentimentItem[]> {
   if (!r.ok) throw new Error(_apiError(r.status, 'Error al cargar sentimiento'));
   return r.json();
 }
+
+// ----- Telegram -----
+export type TelegramStatus = {
+  configured: boolean;
+  bot_username: string | null;
+  bot_link: string;
+  message?: string;
+  error?: string;
+  chats_registered?: number;
+};
+
+export async function fetchTelegramStatus(): Promise<TelegramStatus> {
+  const r = await fetch(`${BASE}/api/telegram/status`);
+  if (!r.ok) throw new Error(_apiError(r.status, 'Error al cargar estado de Telegram'));
+  return r.json();
+}
+
+export async function registerTelegramChat(chatId: number): Promise<{ ok: boolean; chat_id: number; total_chats: number }> {
+  const r = await fetch(`${BASE}/api/telegram/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatId }),
+  });
+  if (!r.ok) throw new Error('Error al registrar Chat ID');
+  return r.json();
+}
+
+export async function sendTelegramTest(chatId?: number, message?: string): Promise<{ ok: boolean; sent_to?: number; results?: unknown[] }> {
+  const r = await fetch(`${BASE}/api/telegram/test`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(chatId != null ? { chat_id: chatId, message } : { message }),
+  });
+  if (!r.ok) throw new Error('Error al enviar prueba');
+  return r.json();
+}

@@ -22,3 +22,67 @@
 {"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773359082003,"hypothesisId":"H2"}
 {"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773359082033,"hypothesisId":"H2"}
 {"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773359082052,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360397453,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360397457,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773360397511,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773360397513,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360434009,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360434011,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360434015,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360434011,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360434016,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360434017,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":502,"statusText":"Bad Gateway","ok":false},"timestamp":1773360434267,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":502,"ok":false},"timestamp":1773360434268,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773360434269,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":502,"ok":false},"timestamp":1773360434269,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":502,"ok":false},"timestamp":1773360434270,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":502,"statusText":"Bad Gateway","ok":false},"timestamp":1773360434270,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360526417,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360526417,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360526418,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360526442,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360526443,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360526444,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360526641,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360526643,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360527255,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360527552,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360527897,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360528339,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360533187,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360533188,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360533189,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360533191,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360533191,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360533192,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360533314,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360533315,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360533512,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360533627,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360534473,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360534866,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360697997,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360697998,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360698001,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360698001,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360697999,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360698002,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360698164,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360698165,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360698964,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360699325,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360699528,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360699911,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360710691,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360710692,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/markets"},"timestamp":1773360710692,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/history?ticker=SPY&period=6mo"},"timestamp":1773360710693,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360711068,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/history?ticker=SPY&period=6mo","status":200,"ok":true},"timestamp":1773360711266,"hypothesisId":"H3"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360711556,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/markets","status":500,"statusText":"Internal Server Error","ok":false},"timestamp":1773360711954,"hypothesisId":"H1"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360712222,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch start","data":{"url":"/api/portfolio-allocation"},"timestamp":1773360712223,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360712257,"hypothesisId":"H2"}
+{"sessionId":"604f20","location":"client.ts","message":"fetch response","data":{"url":"/api/portfolio-allocation","status":200,"ok":true},"timestamp":1773360712268,"hypothesisId":"H2"}

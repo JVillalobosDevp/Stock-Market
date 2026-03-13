@@ -2,12 +2,19 @@
 API para el dashboard StockFlow. Sirve datos reales de mercados vía yfinance.
 """
 import json
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
 import yfinance as yf
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+except ImportError:
+    pass
 
 # #region agent log
 _LOG_PATH = Path(__file__).resolve().parent.parent / "debug-604f20.log"
@@ -215,6 +222,143 @@ def get_sentiment():
         }
         for t in tickers
     ]
+
+
+# ----- Telegram -----
+import threading
+import time
+from api.telegram_client import (
+    get_me,
+    send_message,
+    register_chat_id,
+    get_registered_chats,
+    send_to_all,
+    get_updates,
+    process_updates,
+    _load_last_update_id,
+    _save_last_update_id,
+)
+
+
+def _build_news_message() -> str:
+    """Construye un mensaje de noticia con datos de mercados (para envío periódico)."""
+    now = datetime.now().strftime("%H:%M")
+    lines = [f"📊 <b>StockFlow</b> · {now}"]
+    try:
+        for name, symbol in list(MARKET_TICKERS.items())[:4]:  # SPY, QQQ, DXY, BTC
+            q = _parse_quote(symbol, name)
+            sign = "+" if q["positive"] else ""
+            lines.append(f"• {name}: {q['value']} ({sign}{q['change']}%)")
+    except Exception:
+        lines.append("• Mercados: datos no disponibles")
+    return "\n".join(lines)
+
+
+def _telegram_news_loop() -> None:
+    """En segundo plano: envía una noticia cada 1 minuto a todos los chats registrados."""
+    while True:
+        try:
+            time.sleep(60)
+            if not os.environ.get("TELEGRAM_BOT_TOKEN"):
+                continue
+            chats = get_registered_chats()
+            if not chats:
+                continue
+            msg = _build_news_message()
+            send_to_all(msg)
+        except Exception:
+            pass
+
+
+def _telegram_polling_loop() -> None:
+    """En segundo plano: recibe /start en el bot y registra el chat_id automáticamente."""
+    while True:
+        try:
+            if not os.environ.get("TELEGRAM_BOT_TOKEN"):
+                time.sleep(5)
+                continue
+            offset = _load_last_update_id()
+            r = get_updates(offset=offset if offset > 0 else None)
+            if not r.get("ok"):
+                time.sleep(5)
+                continue
+            results = r.get("result", [])
+            for u in results:
+                offset = u.get("update_id", 0) + 1
+                _save_last_update_id(offset)
+            process_updates(r)
+            if not results:
+                time.sleep(2)
+            else:
+                time.sleep(0.5)
+        except Exception:
+            time.sleep(5)
+
+
+@app.on_event("startup")
+def _start_telegram_polling():
+    if os.environ.get("TELEGRAM_BOT_TOKEN"):
+        threading.Thread(target=_telegram_polling_loop, daemon=True).start()
+        threading.Thread(target=_telegram_news_loop, daemon=True).start()
+
+
+@app.get("/api/telegram/status")
+def telegram_status():
+    """Estado del bot: si hay token configurado y datos del bot."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    if not token:
+        return {
+            "configured": False,
+            "bot_username": None,
+            "bot_link": "https://t.me/stockflow_notibot",
+            "message": "Configura TELEGRAM_BOT_TOKEN en el archivo .env",
+        }
+    r = get_me()
+    if not r.get("ok"):
+        return {
+            "configured": True,
+            "bot_username": None,
+            "bot_link": "https://t.me/stockflow_notibot",
+            "error": r.get("description") or r.get("error"),
+        }
+    username = (r.get("result") or {}).get("username", "")
+    return {
+        "configured": True,
+        "bot_username": username,
+        "bot_link": f"https://t.me/{username}" if username else "https://t.me/stockflow_notibot",
+        "chats_registered": len(get_registered_chats()),
+    }
+
+
+@app.post("/api/telegram/register")
+def telegram_register(body: dict = Body(...)):
+    """Registra tu Chat ID para recibir notificaciones. Obtén tu ID con @userinfobot en Telegram."""
+    chat_id = body.get("chat_id")
+    if chat_id is None:
+        raise HTTPException(status_code=400, detail="Falta chat_id")
+    try:
+        chat_id = int(chat_id)
+    except (TypeError, ValueError):
+        raise HTTPException(status_code=400, detail="chat_id debe ser un número")
+    register_chat_id(chat_id)
+    return {"ok": True, "chat_id": chat_id, "total_chats": len(get_registered_chats())}
+
+
+@app.post("/api/telegram/test")
+def telegram_test(body: dict = Body(...)):
+    """Envía un mensaje de prueba. Si pasas chat_id lo envía solo a ese; si no, a todos los registrados."""
+    chat_id = body.get("chat_id")
+    message = body.get("message") or "✅ StockFlow: notificación de prueba. El bot está conectado."
+    if chat_id is not None:
+        try:
+            cid = int(chat_id)
+            r = send_message(cid, message)
+            return {"ok": r.get("ok", False), "chat_id": cid, "result": r}
+        except (TypeError, ValueError):
+            raise HTTPException(status_code=400, detail="chat_id debe ser un número")
+    # Enviar a todos los registrados
+    results = send_to_all(message)
+    return {"ok": True, "sent_to": len(results), "results": results}
 
 
 @app.get("/health")
